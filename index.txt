@@ -147,10 +147,10 @@
         </video>
         <div class="divider"></div>
         <!-- 视频2 -->
-        <h2 class="section-title">视频作品：AIGC微电影《她的生日》</h2>
+        <h2 class="section-title">视频作品：AIGC微电影  她的生日</h2>
         <p class="desc-text">本微电影就当代母职困境关注每一个“她”，让“她”被看见，视频、分镜等均为AIGC一步步生成所得</p>
         <video controls>
-            <source src="AIGC微电影她的生日.mp4" type="video/mp4">
+            <source src="AIGC微电影  她的生日.mp4" type="video/mp4">
         </video>
         <div class="divider"></div>
         <!-- 视频3 -->
@@ -200,7 +200,7 @@
             <div class="img-item"><img src="图片作品/3提取制作CMYK值.jpg"><div class="img-name">提取制作CMYK值</div></div>
             <!-- 第二行 -->
             <div class="img-item"><img src="图片作品/4修复旧照片.png"><div class="img-name">修复旧照片</div></div>
-            <div class="img-item"><img src="图片作品/5春日来信105.jpg"><div class="img-name">春日来信1</div></div>
+            <div class="img-item"><img src="图片作品/5春日来信1.jpg"><div class="img-name">春日来信1</div></div>
             <div class="img-item"><img src="图片作品/7春日来信3.jpg"><div class="img-name">春日来信3</div></div>
             <!-- 第三行 -->
             <div class="img-item"><img src="图片作品/8春日来信4.jpg"><div class="img-name">春日来信4</div></div>
