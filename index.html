@@ -3,324 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>曹杨佳 - 新媒体个人作品集</title>
+    <title>个人新媒体作品集</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft YaHei", PingFang SC, sans-serif;
+            font-family: "Microsoft Yahei", sans-serif;
         }
         body {
-            background-color: #f5f7fa;
-            color: #2c3e50;
-            line-height: 1.85;
-            padding: 40px 15px;
-        }
-        .page-wrap {
-            max-width: 1100px;
+            background-color: #f7f9fc;
+            max-width: 1200px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 6px 24px rgba(120, 150, 190, 0.12);
+            padding: 40px 20px;
+            color: #223355;
         }
-        h1 {
-            text-align: center;
-            color: #365a86;
-            font-size: 32px;
-            letter-spacing: 3px;
-            margin-bottom: 35px;
-            font-weight: 600;
-        }
-        /* 目录样式 */
-        .catalog-box {
-            background: #f0f5fb;
-            padding: 25px 30px;
-            border-radius: 14px;
-            margin-bottom: 50px;
-        }
-        .catalog-box h2 {
-            color: #365a86;
-            margin-bottom: 16px;
-            font-size: 20px;
-        }
-        .catalog-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 12px;
-        }
-        .catalog-item {
-            display: block;
-            padding: 8px 12px;
-            background: #fff;
-            border-radius: 8px;
-            color: #365a86;
-            text-decoration: none;
-            transition: 0.2s;
-            border: 1px solid #d4e1f2;
-        }
-        .catalog-item:hover {
-            background: #365a86;
-            color: white;
-        }
-        /* 作品板块 */
-        .work-block {
+        section {
             margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px dashed #d4e1f2;
         }
-        .block-title {
-            font-size: 22px;
-            color: #365a86;
-            margin-bottom: 20px;
+        .section-title {
+            font-size: 26px;
+            border-left: 5px solid #335588;
             padding-left: 12px;
-            border-left: 4px solid #365a86;
+            margin-bottom: 20px;
         }
-        .desc {
-            font-size: 16px;
-            margin-bottom: 12px;
-            text-indent: 2em;
+        .desc-text {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            padding-left: 17px;
         }
-        /* 视频播放器 */
-        .video-box {
-            margin: 24px 0;
-        }
+        /* 视频样式 */
         video {
             width: 100%;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px #dde2ec;
         }
-        .img-container {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
+        /* 图片三列网格，和你截图布局一致 */
+        .img-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
-        .img-container img {
-            max-width: 48%;
-            min-width: 280px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
+        .img-item {
+            border: 1px solid #d0d8e8;
+            border-radius: 6px;
+            padding: 8px;
+            background: #fff;
         }
-        .footer-tip {
-            margin-top: 60px;
-            text-align: center;
-            color: #718096;
+        .img-item img {
+            width: 100%;
+            display: block;
+            border-radius: 4px;
+        }
+        .img-name {
             font-size: 14px;
+            margin-top: 6px;
+            color: #445577;
         }
-        em {
-            color: #999;
+        .divider {
+            border-bottom: 1px dashed #b8c8e0;
+            margin: 40px 0;
+        }
+        footer {
+            text-align: center;
+            color: #667799;
+            font-size: 14px;
+            padding-top: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="page-wrap">
-        <h1>曹杨佳 新媒体综合作品集</h1>
-        <div class="catalog-box">
-            <h2>📋 作品集目录（点击快速跳转）</h2>
-            <div class="catalog-list">
-                <a href="#img_work" class="catalog-item">一、图片作品</a>
-                <a href="#video1" class="catalog-item">视频作品：劫后桃花选段拍摄</a>
-                <a href="#video2" class="catalog-item">视频作品：课程作业——仿拍作品</a>
-                <a href="#video3" class="catalog-item">视频作品：课程作业——樱花主题</a>
-                <a href="#video4" class="catalog-item">视频作品：漫游于海</a>
-                <a href="#video5" class="catalog-item">视频作品：AIGC微电影《她的生日》</a>
-                <a href="#video6" class="catalog-item">视频作品：青岛</a>
-                <a href="#video7" class="catalog-item">视频作品：药斑布</a>
-                <a href="#data_news" class="catalog-item">二、数据新闻作品</a>
-                <a href="#report1" class="catalog-item">三、深度报道——渔民</a>
-                <a href="#village_plan" class="catalog-item">四、村落建设规划书</a>
-            </div>
-        </div>
+    <!-- ========== 全部7个视频作品区域 ========== -->
+    <section>
+        <!-- 视频1 -->
+        <h2 class="section-title">视频作品：漫游于海</h2>
+        <p class="desc-text">本视频制作与青岛海边，用于参加2024年全国大学生旅游创意设计大赛</p>
+        <video controls>
+            <source src="漫游于海.mp4" type="video/mp4">
+            浏览器不支持播放视频
+        </video>
+        <div class="divider"></div>
 
-        <!-- 一、图片作品 -->
-        <section id="img_work" class="work-block">
-            <h2 class="block-title">一、图片作品</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换图片作品介绍.txt内的文字】</em>
-                </p>
-                <div class="img-container">
-                    <img src="图片作品/20240509171523_IMG_6241.JPG" alt="摄影配图">
-                    <img src="图片作品/人像.jpg" alt="摄影配图">
-                    <img src="图片作品/修复旧照片.png" alt="摄影配图">
-                    <img src="图片作品/光影婆娑1.jpg" alt="摄影配图">
-                    <img src="图片作品/光影婆娑2.jpg" alt="摄影配图">
-                    <img src="图片作品/光影婆娑3.jpg" alt="摄影配图">
-                    <img src="图片作品/悠然自得1.jpg" alt="摄影配图">
-                    <img src="图片作品/悠然自得2.jpg" alt="摄影配图">
-                    <img src="图片作品/悠然自得3.jpg" alt="摄影配图">
-                    <img src="图片作品/提取制作CMYK值.jpg" alt="设计配图">
-                    <img src="图片作品/春日来信1.jpg" alt="摄影配图">
-                    <img src="图片作品/春日来信2.jpg" alt="摄影配图">
-                    <img src="图片作品/春日来信3.jpg" alt="摄影配图">
-                    <img src="图片作品/春日来信4.jpg" alt="摄影配图">
-                    <img src="图片作品/曹杨佳.jpg" alt="人像摄影">
-                    <img src="图片作品/曹杨佳.png" alt="人像摄影">
-                    <img src="图片作品/海大春夏秋冬.png" alt="校园摄影">
-                    <img src="图片作品/海纳百川1.jpg" alt="校园摄影">
-                    <img src="图片作品/海纳百川2.jpg" alt="校园摄影">
-                    <img src="图片作品/海纳百川3.jpg" alt="校园摄影">
-                    <img src="图片作品/秋景照片进行艺术创作.jpg" alt="艺术摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列一.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列七.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列三.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列二.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列五.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列八.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列六.jpg" alt="抽象摄影">
-                    <img src="图片作品/镜头中的海大——抽象主义摄影系列四.jpg" alt="抽象摄影">
-                </div>
-            </div>
-        </section>
+        <!-- 视频2 -->
+        <h2 class="section-title">视频作品：AIGC微电影《她的生日》</h2>
+        <p class="desc-text">本微电影就当代母职困境关注每一个“她”，让“她”被看见，视频、分镜等均为AIGC一步步生成所得</p>
+        <video controls>
+            <source src="AIGC微电影她的生日.mp4" type="video/mp4">
+        </video>
+        <div class="divider"></div>
 
-        <!-- 视频1：劫后桃花选段拍摄 -->
-        <section id="video1" class="work-block">
-            <h2 class="block-title">视频作品：劫后桃花选段拍摄</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换劫后桃花选段拍摄.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="劫后桃花选段拍摄.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
-            </div>
-        </section>
+        <!-- 视频3 -->
+        <h2 class="section-title">视频作品：青岛</h2>
+        <p class="desc-text">视频更多聚焦青岛风光展现青岛之美</p>
+        <video controls>
+            <source src="青岛.mp4" type="video/mp4">
+        </video>
+        <div class="divider"></div>
 
-        <!-- 视频2：课程作业——仿拍作品 -->
-        <section id="video2" class="work-block">
-            <h2 class="block-title">视频作品：课程作业——仿拍作品</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换仿拍作品.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="课程作业——仿拍作品.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
-            </div>
-        </section>
+        <!-- 视频4 -->
+        <h2 class="section-title">视频作品：药斑布</h2>
+        <p class="desc-text">本视频作为2024年国际短视频大赛的参赛作品制作而成，呼吁人们关注非遗“药斑布”，了解、宣传非遗</p>
+        <video controls>
+            <source src="药斑布.mp4" type="video/mp4">
+        </video>
+        <div class="divider"></div>
 
-        <!-- 视频3：课程作业——樱花主题 -->
-        <section id="video3" class="work-block">
-            <h2 class="block-title">视频作品：课程作业——樱花主题</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换樱花主题.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="课程作业——樱花主题.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
-            </div>
-        </section>
+        <!-- 视频5（剩余3个你自行改文件名） -->
+        <h2 class="section-title">视频作品：劫后桃花选段拍摄</h2>
+        <p class="desc-text">本视频为电影《劫后桃花》剧本的选段拍摄，鉴于电影《劫后桃花》原片已无从寻找，视频中包含本人与小组成员们对剧本的理解，以及对视频的再创作</p>
+        <video controls>
+            <source src="劫后桃花选段拍摄.mp4" type="video/mp4">
+        </video>
+        <div class="divider"></div>
 
-        <!-- 视频4：漫游于海 -->
-        <section id="video4" class="work-block">
-            <h2 class="block-title">视频作品：漫游于海</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换漫游于海.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="漫游于海.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
-            </div>
-        </section>
+        <!-- 视频6 -->
+        <h2 class="section-title">视频作品：课程作业——樱花主题</h2>
+        <p class="desc-text">本视频拍摄于校园樱花季开放，以樱花为主题，讲述樱花季的故事</p>
+        <video controls>
+            <source src="课程作业——樱花主题.mp4" type="video/mp4">
+        </video>
+        <div class="divider"></div>
 
-        <!-- 视频5：AIGC微电影《她的生日》 -->
-        <section id="video5" class="work-block">
-            <h2 class="block-title">视频作品：AIGC微电影《她的生日》</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换她的生日.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="AIGC微电影《她的生日》.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
-            </div>
-        </section>
+        <!-- 视频7 -->
+        <h2 class="section-title">视频作品：课程作业——仿拍作品</h2>
+        <p class="desc-text">本视频为实验作品，表现内卷、压抑</p>
+        <video controls>
+            <source src="课程作业——仿拍作品.mp4" type="video/mp4">
+        </video>
+    </section>
 
-        <!-- 视频6：青岛 -->
-        <section id="video6" class="work-block">
-            <h2 class="block-title">视频作品：青岛</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换青岛.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="青岛.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
-            </div>
-        </section>
+    <div class="divider"></div>
 
-        <!-- 视频7：药斑布 -->
-        <section id="video7" class="work-block">
-            <h2 class="block-title">视频作品：药斑布</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换药斑布.txt文字】</em>
-                </p>
-                <div class="video-box">
-                    <video controls preload="metadata">
-                        <source src="药斑布.mp4" type="video/mp4">
-                        你的浏览器不支持视频播放
-                    </video>
-                </div>
+    <!-- ========== 一、图片作品 完整网格（和你截图行列完全一致） ========== -->
+    <section>
+        <h2 class="section-title">一、图片作品</h2>
+        <p class="desc-text">此处粘贴全部摄影作品总介绍文字</p>
+        <div class="img-grid">
+            <!-- 第一行 -->
+            <div class="img-item"><img src="图片作品/1曹杨佳.jpg"><div class="img-name">ps合成作品</div></div>
+            <div class="img-item"><img src="图片作品/2曹杨佳02.png"><div class="img-name">ps合成作品</div></div>
+            <div class="img-item"><img src="图片作品/3提取制作CMYK值.jpg"><div class="img-name">提取制作CMYK值</div></div>
+            <!-- 第二行 -->
+            <div class="img-item"><img src="图片作品/4修复旧照片.png"><div class="img-name">修复旧照片</div></div>
+            <div class="img-item"><img src="图片作品/5春日来信105.jpg"><div class="img-name">春日来信1</div></div>
+            <div class="img-item"><img src="图片作品/7春日来信3.jpg"><div class="img-name">春日来信3</div></div>
+            <!-- 第三行 -->
+            <div class="img-item"><img src="图片作品/8春日来信4.jpg"><div class="img-name">春日来信4</div></div>
+            <div class="img-item"><img src="图片作品/9光影婆娑1.jpg"><div class="img-name">光影婆娑1</div></div>
+            <div class="img-item"><img src="图片作品/10光影婆娑2.jpg"><div class="img-name">光影婆娑2</div></div>
+            <!-- 第四行 -->
+            <div class="img-item"><img src="图片作品/11光影婆娑3.jpg"><div class="img-name">光影婆娑3</div></div>
+            <div class="img-item"><img src="图片作品/12海大春夏秋冬.png"><div class="img-name">海大春夏秋冬</div></div>
+            <div class="img-item"><img src="图片作品/13海纳百川1.jpg"><div class="img-name">海纳百川1</div></div>
+            <!-- 第五行 -->
+            <div class="img-item"><img src="图片作品/14海纳百川2.jpg"><div class="img-name">海纳百川2</div></div>
+            <div class="img-item"><img src="图片作品/15海纳百川3.jpg"><div class="img-name">海纳百川3</div></div>
+            <div class="img-item"><img src="图片作品/16镜头中的海大——抽象主义摄影系列八.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列八</div></div>
+            <!-- 第六行 -->
+            <div class="img-item"><img src="图片作品/17镜头中的海大——抽象主义摄影系列二.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列二</div></div>
+            <div class="img-item"><img src="图片作品/18镜头中的海大——抽象主义摄影系列六.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列六</div></div>
+            <div class="img-item"><img src="图片作品/19镜头中的海大——抽象主义摄影系列七.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列七</div></div>
+            <!-- 第七行 -->
+            <div class="img-item"><img src="图片作品/20镜头中的海大——抽象主义摄影系列三.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列三</div></div>
+            <div class="img-item"><img src="图片作品/21镜头中的海大——抽象主义摄影系列四.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列四</div></div>
+            <div class="img-item"><img src="图片作品/22镜头中的海大——抽象主义摄影系列五.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列五</div></div>
+            <!-- 第八行抽象摄影 -->
+            <div class="img-item"><img src="图片作品/23镜头中的海大——抽象主义摄影系列一.jpg"><div class="img-name">镜头中的海大——抽象主义摄影系列一</div></div>
+            <div class="img-item"><img src="图片作品/24秋景照片进行艺术创作.jpg"><div class="img-name">秋景照片进行艺术创作</div></div>
+            <div class="img-item"><img src="图片作品/25人像.jpg"><div class="img-name">人像</div></div>
+            <!-- 第九行 -->
+            <div class="img-item"><img src="图片作品/26悠然自得1.jpg"><div class="img-name">悠然自得1</div></div>
+            <div class="img-item"><img src="图片作品/27悠然自得2jpg"><div class="img-name">悠然自得2</div></div>
+            <div class="img-item"><img src="图片作品/28悠然自得3.jpg"><div class="img-name">悠然自得3</div></div>
             </div>
-        </section>
+    </section>
 
-        <!-- 二、数据新闻作品 -->
-        <section id="data_news" class="work-block">
-            <h2 class="block-title">二、数据新闻作品</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换数据新闻介绍.txt文字】</em>
-                </p>
-                <div class="img-container">
-                    <img src="数据新闻作品.jpg" alt="数据新闻图表">
-                </div>
-            </div>
-        </section>
+    <div class="divider"></div>
 
-        <!-- 三、深度报道——渔民 -->
-        <section id="report1" class="work-block">
-            <h2 class="block-title">三、深度报道——渔民</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换深度报道渔民.txt文字】</em>
-            </div>
-        </section>
+    <!-- ========== 二、数据新闻作品 ========== -->
+  <section>
+  <h2 class="section-title">二、数据新闻作品</h2>
+  <p class="desc-text">本篇数据新闻聚焦当下热门话题——卫生巾价格，展开对卫生巾价格、卫生巾标准、用户使用体验、使用需求等的内容的分析，通过数据可视化的方式清晰明了展现卫生巾话题</p>
+  <!-- 新增数据新闻图片 -->
+  <div style="margin-top:20px;">
+    <img src="数据新闻作品.jpg" style="width:100%;border-radius:8px;box-shadow:0 2px 12px #dde2ec;">
+  </div>
+</section>
 
-        <!-- 四、村落建设规划书 -->
-        <section id="village_plan" class="work-block">
-            <h2 class="block-title">四、村落建设规划书</h2>
-            <div class="work-content">
-                <p class="desc">
-                    <em>【外网发布前删除本段，替换村落规划书.txt文字】</em>
-            </div>
-        </section>
+    <!-- ========== 三、深度报道——渔民 ========== -->
+    <section>
+        <h2 class="section-title">三、深度报道——渔民</h2>
+        <p class="desc-text">本报道为有关渔民的深度报道，通过了解与民生活与困境，让渔民生活走进大众视野，加深对渔民群体的了解与关爱</p>
+    </section>
 
-        <div class="footer-tip">
-            包含摄影、视频短片、数据新闻、深度报道、乡村规划类全部原创作品
-        </div>
-    </div>
+    <div class="divider"></div>
+
+    <!-- ========== 四、村落建设规划书 ========== -->
+    <section>
+        <h2 class="section-title">四、村落建设规划书</h2>
+        <p class="desc-text">本规划书在实地考察后撰写，结合当下沉浸式主题景区与岛屿特色进行撰写，为岛屿建设提供新的发展方向，为村落发展提供新的可能</p>
+    </section>
+
+    <footer>
+        包含摄影、视频短片、数据新闻、深度报道、乡村规划类全部原创作品
+    </footer>
 </body>
 </html>
